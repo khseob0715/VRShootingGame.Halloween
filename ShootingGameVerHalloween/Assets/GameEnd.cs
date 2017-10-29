@@ -9,7 +9,7 @@ public class GameEnd : MonoBehaviour {
 
 	private GameObject Score_Text;
 
-	private bool check = false;
+	public static bool check = false;
 	private TextMesh temp;
 	// Use this for initialization
 	void Start () {

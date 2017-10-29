@@ -74,12 +74,12 @@ public class LaserGun : MonoBehaviour
 		ScoreTextMesh.text = "Escape Town";
 		TimeTextMesh = GameObject.FindGameObjectWithTag ("CanvasTimeText").GetComponent<TextMesh> ();
 		audioSources [2].loop = true;
-		audioSources [2].volume = 0.3f;
-		audioSources [0].volume = 0.3f;
-		audioSources [1].volume = 0.5f;
+		audioSources [2].volume = 0.7f;
+		audioSources [0].volume = 0.4f;
+		audioSources [1].volume = 0.6f;
 		Play(2);
 		GameTime = 0;
-	//	TimeTextMesh.text = "Time : " + GameTime + " s";
+	
 	}
 		
 	// Update is called once per frame
@@ -89,17 +89,6 @@ public class LaserGun : MonoBehaviour
 		ray.origin = this.transform.position;
 		ray.direction = this.transform.forward; // 기존 앞으로 나가는 ray 
 
-		tempTime += Time.deltaTime;
-
-		GameTime += 1;
-		tempTime = 0.0f;
-	//	TimeTextMesh.text = "Time : " + GameTime + " s";
-		if (!timecheck) { // 시간 보정.
-			GameTime += 1; 
-			timecheck = true;
-		} else {
-			timecheck = false;
-		}
 			
 		if (Controller.GetPressDown (SteamVR_Controller.ButtonMask.Trigger)) {  // 트리거를 눌렀을 때
 			GameObject bul = Instantiate (bullet, this.transform.position + new Vector3 (0f, 0.15f, 0f), this.transform.rotation);
@@ -114,33 +103,24 @@ public class LaserGun : MonoBehaviour
 				// 오브젝트가 파괴되었을 때 생성되는 particle 오브젝트 
 				Destroy (temp, 1.0f); 
 				// 파티클 오브젝트 1초 뒤 파괴 
-
-
-
-				if (hit.collider.gameObject == GameObject.Find ("ExitButton")) {
-					bGameExit = true;
-				} else if (hit.collider.gameObject == GameObject.Find ("RestartButton")) {
-					bGameRestart = true;	
-				}
 		
-				Play (1); // 몬스터 죽는 효과음.
-				if (!bGameExit)
-					Destroy (hit.collider.gameObject);
 
-				if (hit.collider.gameObject == GameObject.FindGameObjectWithTag ("Devil")) {
+				if (hit.collider.gameObject != GameObject.Find ("Box")) {
 					Debug.Log ("Dead");
 					GameObject Death = Instantiate (Dead_devil, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
 					Destroy (Death, 2.0f);
-
+				} else {
+					GameEnd.check = true;
 				}
+
+				Destroy (hit.collider.gameObject);
+				Play (1); // 몬스터 죽는 효과음.
 				score += 1;
 				ScoreTextMesh.text = "Kill Score: " + score;
 				TimeTextMesh.text = "Find the key";
-
-							
+						
 			}
 			Destroy (bul, 2.0f); // 총알 객체 파괴.
-
 		}
 	}
 
@@ -151,7 +131,7 @@ public class LaserGun : MonoBehaviour
 		Gizmos.DrawWireSphere (ray.origin, 1.0f);
 	}
 
-	public  void Play (int index)
+	public void Play (int index)
 	{
 		audioSources [index].Play ();
 	}
