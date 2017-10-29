@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\BreakableItems\Editor\Image Effects\AntialiasingAsPostEffectEditor.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\LaserGun.cs">
     <Files>
-      <File FileName="Assets\LaserGun.cs" Line="1" Column="1" />
+      <File FileName="Assets\LaserGun.cs" Line="148" Column="3" />
       <File FileName="Assets\BallDestroySound.cs" Line="1" Column="1" />
       <File FileName="Assets\sampleagentScript.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" Line="1" Column="1" />
-      <File FileName="Assets\BreakableItems\Editor\Image Effects\AntialiasingAsPostEffectEditor.js" Line="43" Column="1" />
+      <File FileName="Assets\SteamVR\Scripts\SteamVR_PlayArea.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\attack.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

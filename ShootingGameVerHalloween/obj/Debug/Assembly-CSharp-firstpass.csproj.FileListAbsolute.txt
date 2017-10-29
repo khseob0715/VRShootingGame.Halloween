@@ -30,4 +30,3 @@ C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\Temp\bin\Debug\Uni
 C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\obj\Debug\Assembly-CSharp-firstpass.csprojResolveAssemblyReference.cache
 C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\obj\Debug\Assembly-CSharp-firstpass.pdb
-C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\Temp\bin\Debug\OmniCommon.dll

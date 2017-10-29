@@ -11,6 +11,7 @@ TagManager:
   - CanvasScoreText
   - Line
   - Result_Score
+  - Devil
   layers:
   - Default
   - TransparentFX

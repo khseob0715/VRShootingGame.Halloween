@@ -201,9 +201,6 @@
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
- <Reference Include="OmniCommon">
- <HintPath>C:/Users/YuGyungho/Desktop/Halloween/ShootingGameVerHalloween/Assets/OmniSDK/Plugins/OmniCommon.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

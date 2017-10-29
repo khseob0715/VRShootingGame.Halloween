@@ -20,6 +20,7 @@ public class LaserGun : MonoBehaviour
 	private TextMesh TimeTextMesh;
 
 	public GameObject bullet;
+	public GameObject Dead_devil;
 
 	public static int score;
 	public static int GameTime;
@@ -122,16 +123,19 @@ public class LaserGun : MonoBehaviour
 					bGameRestart = true;	
 				}
 		
-				Play (1); // 볼이 터지는 효과음
+				Play (1); // 몬스터 죽는 효과음.
 				if (!bGameExit)
 					Destroy (hit.collider.gameObject);
 
-				if (hit.collider.gameObject != GameObject.Find ("Box")) {
-					score += 1;
-					ScoreTextMesh.text = "Kill Score: " + score;
-					TimeTextMesh.text = "Find the key";
-				}
+				if (hit.collider.gameObject == GameObject.FindGameObjectWithTag ("Devil")) {
+					Debug.Log ("Dead");
+					GameObject Death = Instantiate (Dead_devil, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
+					Destroy (Death, 2.0f);
 
+				}
+				score += 1;
+				ScoreTextMesh.text = "Kill Score: " + score;
+				TimeTextMesh.text = "Find the key";
 
 							
 			}
