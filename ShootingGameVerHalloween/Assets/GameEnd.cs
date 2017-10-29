@@ -23,7 +23,7 @@ public class GameEnd : MonoBehaviour {
 		if (check) {	
 			MenuUI.SetActive (true);
 			temp = GameObject.FindGameObjectWithTag ("Result_Score").GetComponent<TextMesh> ();
-			temp.text = "Score : " + LaserGun.score;
+			temp.text = "Clear Time : " + LaserGun.GameTime + "s";
 			Time_score.SetActive (false);	
 		}
 	}

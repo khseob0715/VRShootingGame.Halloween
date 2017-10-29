@@ -2,14 +2,18 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\LaserGun.cs">
     <Files>
-      <File FileName="Assets\LaserGun.cs" Line="1" Column="1" />
-      <File FileName="Assets\BallDestroySound.cs" Line="1" Column="1" />
-      <File FileName="Assets\sampleagentScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" Line="1" Column="1" />
-      <File FileName="Assets\SteamVR\Scripts\SteamVR_PlayArea.cs" Line="1" Column="1" />
+      <File FileName="Assets\LaserGun.cs" Line="128" Column="17" />
       <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\attack.cs" Line="1" Column="1" />
-      <File FileName="Assets\RestartGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\RestartGame.cs" Line="21" Column="26" />
       <File FileName="Assets\GameEnd.cs" Line="1" Column="1" />
+      <File FileName="Assets\ExitApplication.cs" Line="29" Column="19" />
+      <File FileName="Assets\targetRandom.cs" Line="9" Column="74" />
+      <File FileName="Assets\touchPadMove.cs" Line="22" Column="2" />
+      <File FileName="Assets\BallDestroySound.cs" Line="1" Column="1" />
+      <File FileName="Assets\colliderSound.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\AICharacterControl.cs" Line="59" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

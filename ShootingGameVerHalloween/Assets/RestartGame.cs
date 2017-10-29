@@ -18,7 +18,7 @@ public class RestartGame : MonoBehaviour {
 			if (DeltaTime < 0.0f) {
 				LaserGun.bGameRestart = false;
 				LaserGun.score = 0;
-				LaserGun.GameTime = 60;
+				LaserGun.GameTime = 0;
 				SceneManager.LoadScene (SceneManager.GetActiveScene().name);
 
 			}

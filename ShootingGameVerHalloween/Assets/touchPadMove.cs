@@ -19,7 +19,6 @@ public class touchPadMove : MonoBehaviour {
 	private  AudioSource[] audioSources = new AudioSource[1];
 	public  AudioClip[] audioClips = new AudioClip[1];
 
-	bool check = false;
 
 	private SteamVR_Controller.Device Controller
 	{

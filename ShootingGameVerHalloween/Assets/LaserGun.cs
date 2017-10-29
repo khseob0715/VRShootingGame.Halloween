@@ -88,7 +88,19 @@ public class LaserGun : MonoBehaviour
 		
 		ray.origin = this.transform.position;
 		ray.direction = this.transform.forward; // 기존 앞으로 나가는 ray 
-
+		if (GameEnd.check == false) {
+			tempTime += Time.deltaTime;
+			if (tempTime > 1.0f) {
+				GameTime += 1;
+				tempTime = 0.0f;
+				if (!timecheck) { // 시간 보정.
+					GameTime -= 1; 
+					timecheck = true;
+				} else {
+					timecheck = false;
+				}
+			}
+		}
 			
 		if (Controller.GetPressDown (SteamVR_Controller.ButtonMask.Trigger)) {  // 트리거를 눌렀을 때
 			GameObject bul = Instantiate (bullet, this.transform.position + new Vector3 (0f, 0.15f, 0f), this.transform.rotation);
@@ -96,7 +108,7 @@ public class LaserGun : MonoBehaviour
 
 			Play (0); // 총알 효과음
 
-			if (Physics.Raycast (ray, out hit, 100) && hit.collider.gameObject != GameObject.Find ("Plane")) {
+			if (Physics.Raycast (ray, out hit, 100) && hit.collider.gameObject != GameObject.Find ("Plane") && hit.collider.gameObject != GameObject.Find("dairy")) {
 
 				int index = (int)Random.Range (0.0f, 5.0f);
 				GameObject temp = Instantiate (Parr [index], hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation); 
@@ -104,20 +116,27 @@ public class LaserGun : MonoBehaviour
 				Destroy (temp, 1.0f); 
 				// 파티클 오브젝트 1초 뒤 파괴 
 		
+				if (hit.collider.gameObject == GameObject.Find ("ExitButton")) {
+					Debug.Log ("exitexitexitexitexitexitexitexitexitexit");
+					bGameExit = true;
+				} else if (hit.collider.gameObject == GameObject.Find ("RestartButton")) {
+					bGameRestart = true;	
+				}
 
-				if (hit.collider.gameObject != GameObject.Find ("Box")) {
+				if (hit.collider.gameObject != GameObject.Find ("KingBox") && hit.collider.gameObject != GameObject.Find ("Box")) {
 					Debug.Log ("Dead");
+					score += 1;
 					GameObject Death = Instantiate (Dead_devil, hit.collider.gameObject.transform.position, hit.collider.gameObject.transform.rotation);
 					Destroy (Death, 2.0f);
-				} else {
+				} else if(hit.collider.gameObject == GameObject.Find ("KingBox")){
 					GameEnd.check = true;
 				}
 
 				Destroy (hit.collider.gameObject);
 				Play (1); // 몬스터 죽는 효과음.
-				score += 1;
+		
 				ScoreTextMesh.text = "Kill Score: " + score;
-				TimeTextMesh.text = "Find the key";
+				TimeTextMesh.text = "Find the KingBox";
 						
 			}
 			Destroy (bul, 2.0f); // 총알 객체 파괴.

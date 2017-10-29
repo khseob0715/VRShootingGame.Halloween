@@ -13,7 +13,9 @@ public class ExitApplication : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log ("exitexitexitexitexitexitexitexitexitexit");
 		if (LaserGun.bGameExit) {
+			Debug.Log ("exitexitexitexitexitexitexitexitexitexit");
 			DeltaTime -= Time.deltaTime;
 			if (DeltaTime < 0.0f) {
 				Debug.Log ("Quit");

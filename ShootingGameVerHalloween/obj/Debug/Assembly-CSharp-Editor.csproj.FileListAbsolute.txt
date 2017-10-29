@@ -59,6 +59,3 @@ C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\Temp\bin\Debug\Uni
 C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\obj\Debug\Assembly-CSharp-Editor.csprojResolveAssemblyReference.cache
 C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\obj\Debug\Assembly-CSharp-Editor.dll
 C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\obj\Debug\Assembly-CSharp-Editor.pdb
-C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\Temp\bin\Debug\OmniCommon.dll
-C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\Temp\bin\Debug\SyntaxTree.VisualStudio.Unity.Bridge.dll
-C:\Users\YuGyungho\Desktop\Halloween\ShootingGameVerHalloween\Temp\bin\Debug\SyntaxTree.VisualStudio.Unity.Messaging.dll
